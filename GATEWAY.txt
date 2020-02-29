@@ -1,0 +1,14 @@
+El Gateway que se utilizo fue FABIO
+
+Unicamente debe descargarlo y ejecutarlo no se necesita realizar ninguna configuracion extra
+https://github.com/fabiolb/fabio/releases/download/v1.5.13/fabio-1.5.13-go1.13.4-windows_amd64.exe
+
+Las configuraciones necesarias ya viene realizadas en los servicios rest de cada uno de los servidores 
+en este caso para Usuario y TODOs
+
+Fabio tiene una consola de administracion en la cual se puede administrar los servicios
+cada uno con su ip y su nombre en la direccion http://localhost:9998
+
+Para realizar la prueba del correcto funcionamiento del gateway debe ingresar a la ip con los servicios 
+
+http://localhost:9999/todo ó http://localhost:9999/usuario

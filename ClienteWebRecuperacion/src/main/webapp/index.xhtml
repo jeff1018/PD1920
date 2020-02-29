@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	<h:head>
+		<title>LISTADOS</title>
+	</h:head>
+	<h:body>
+	
+	<h1>Listado Usuarios</h1>
+	
+		<h:form>
+			<h:dataTable value="#{beanUsuario.lista}" var="usuario">
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputLabel value="#{usuario.id}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Id usuario</f:facet>
+					<h:outputLabel value="#{usuario.user_id}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Title</f:facet>
+					<h:outputLabel value="#{usuario.title}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Completed</f:facet>
+					<h:outputLabel value="#{usuario.completed}">
+					</h:outputLabel>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+	<h1>Listado Todo</h1>
+		<h:form>
+			<h:dataTable value="#{beanTodo.lista}" var="todo">
+				<h:column>
+					<f:facet name="header">Id</f:facet>
+					<h:outputLabel value="#{todo.id}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Name</f:facet>
+					<h:outputLabel value="#{todo.name}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">User Name</f:facet>
+					<h:outputLabel value="#{todo.username}">
+					</h:outputLabel>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Email</f:facet>
+					<h:outputLabel value="#{todo.email}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Phone</f:facet>
+					<h:outputLabel value="#{todo.phone}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Website</f:facet>
+					<h:outputLabel value="#{todo.website}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Company Name</f:facet>
+					<h:outputLabel value="#{todo.id_company.name}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Catch Phrase</f:facet>
+					<h:outputLabel value="#{todo.id_company.catch_phrase}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ciudad</f:facet>
+					<h:outputLabel value="#{todo.id_direccion.city}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Street</f:facet>
+					<h:outputLabel value="#{todo.id_direccion.street}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Suite</f:facet>
+					<h:outputLabel value="#{todo.id_direccion.suite}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Zip code</f:facet>
+					<h:outputLabel value="#{todo.id_direccion.zipcode}"/>
+				</h:column>
+			</h:dataTable>
+		</h:form>	
+		
+	</h:body>
+</html>
